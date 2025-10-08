@@ -1,7 +1,7 @@
 
 package practicaevaluada1;
 
-
+//PRUEBA
 public class PlanetaRocoso extends Planet {
     
     private String composicion, tipoSuperficie, caractTamaño, tipoNucleo;
