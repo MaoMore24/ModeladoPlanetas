@@ -17,7 +17,6 @@ public abstract class CuerpoCeleste implements Planeta {
     
    
 
-    @Override
     public String getNombre() {
         return nombre;
     }
@@ -26,7 +25,6 @@ public abstract class CuerpoCeleste implements Planeta {
         this.nombre = nombre;
     }
 
-    @Override
     public double getTamaño() {
         return tamaño;
     }
@@ -35,7 +33,6 @@ public abstract class CuerpoCeleste implements Planeta {
         this.tamaño = tamaño;
     }
 
-    @Override
     public double getDistanciaAlSol() {
         return distanciaAlSol;
     }
@@ -44,7 +41,6 @@ public abstract class CuerpoCeleste implements Planeta {
         this.distanciaAlSol = distanciaAlSol;
     }
 
-    @Override
     public int getNumeroLunas() {
         return numeroLunas;
     }
@@ -53,10 +49,8 @@ public abstract class CuerpoCeleste implements Planeta {
         this.numeroLunas = numeroLunas;
     }
 
-    @Override
     public abstract double calcularAño();
     
-    @Override
     public abstract String getTipo();
 
        
