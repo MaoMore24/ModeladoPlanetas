@@ -2,50 +2,31 @@
 package practicaevaluada1;
 
 
-public class Planet {
-    private String nombre;
-    private double tamaño, distanciaSol;
-    private int numLunas;
+public abstract class Planet extends CuerpoCeleste implements Planeta {
+    private int numeroLunas;
 
-    public Planet(double tamaño, double distanciaSol, int numLunas) {
-        this.tamaño = tamaño;
-        this.distanciaSol = distanciaSol;
-        this.numLunas = numLunas;
+    public Planet(String nombre, double tamaño, double distanciaAlSol, int numeroLunas) {
+        super(nombre, tamaño, distanciaAlSol);
+        this.numeroLunas = numeroLunas;
     }
 
-    public double getTamaño() {
-        return tamaño;
+    public int getNumeroLunas() {
+        return numeroLunas;
     }
 
-    public void setTamaño(double tamaño) {
-        this.tamaño = tamaño;
+    public void setNumeroLunas(int numeroLunas) {
+        this.numeroLunas = numeroLunas;
     }
+    
 
-    public double getDistanciaSol() {
-        return distanciaSol;
-    }
-
-    public void setDistanciaSol(double distanciaSol) {
-        this.distanciaSol = distanciaSol;
-    }
-
-    public int getNumLunas() {
-        return numLunas;
-    }
-
-    public void setNumLunas(int numLunas) {
-        this.numLunas = numLunas;
+    public double calcularAño() {
+        return this.getDistanciaAlSol() * 365;
     }
 
     @Override
     public String toString() {
-        return "Planeta = " + "\nTamaño = " + tamaño 
-                + "\nDistancia al Sol = " + distanciaSol 
-                + "\nNúmero de Lunas = " + numLunas + ".";
+        return "Planeta = " + "\nNúmero de Lunas = " + numeroLunas + ".";
     }
     
-    
-    
-      
-    
+          
 }

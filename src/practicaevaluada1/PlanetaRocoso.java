@@ -6,13 +6,16 @@ public class PlanetaRocoso extends Planet {
     
     private String composicion, tipoSuperficie, caractTamaño, tipoNucleo;
 
-    public PlanetaRocoso(String composicion, String tipoSuperficie, String caractTamaño, String tipoNucleo, double tamaño, double distanciaSol, int numLunas) {
-        super(tamaño, distanciaSol, numLunas);
+    public PlanetaRocoso(String nombre, double tamaño, double distanciaAlSol, int numeroLunas, 
+            String composicion, String tipoSuperficie, String caractTamaño, String tipoNucleo) {
+        super(nombre, tamaño, distanciaAlSol, numeroLunas);
         this.composicion = composicion;
         this.tipoSuperficie = tipoSuperficie;
         this.caractTamaño = caractTamaño;
         this.tipoNucleo = tipoNucleo;
     }
+
+    
 
     public String getComposicion() {
         return composicion;
@@ -46,8 +49,10 @@ public class PlanetaRocoso extends Planet {
         this.tipoNucleo = tipoNucleo;
     }
 
+    public String getTipo(){
+        return "Rocoso";
+    }
     
-
     @Override
     public String toString() {
         return super.toString() + "Planeta Rocoso: " + "\nComposición = " + composicion + 
